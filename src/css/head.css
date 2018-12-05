@@ -1,0 +1,93 @@
+.head {
+  padding: 25px 0 50px;
+}
+header {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  text-decoration: none;
+}
+#headerLogo {
+  float: left;
+  margin: 50px 0;
+}
+a {
+  outline: 0;
+  color: #656c7a;
+  line-height: 34px;
+  -webkit-transition: color 0.25s ease;
+  transition: color 0.25s ease;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+#headerLogo h1 {
+  font-weight: 700;
+  line-height: 5rem;
+  font-size: 40px;
+  font-size: 2.5rem;
+}
+#headerLogo h1 {
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+#headerNav nav {
+  float: right;
+  margin: 50px 0;
+  padding-top: 25px;
+}
+#headerNav li {
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.headerNavList:first-child {
+  margin-left: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  text-decoration: none;
+  outline: 0;
+  color: #656c7a;
+  line-height: 34px;
+  -webkit-transition: color 0.25s ease;
+  transition: color 0.25s ease;
+  text-decoration: none;
+}
+.headerNavList {
+  margin-left: 25px;
+  display: inline-block;
+}
+h1 {
+  margin: 0;
+  padding: 0;
+}
+.aboutHover a {
+  border-bottom: 2px solid #e7e9ee;
+}
+
+/* SECTION */
+article {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 2rem 0;
+  display: inline-block;
+  border-top: 2px solid #e7e9ee;
+  border-bottom: 2px solid #e7e9ee;
+}
+/* PROJECT COTAINER */
+
+/* PROJECT */
+.project {
+  display: flex;
+  max-height: 120px;
+  margin-bottom: 15px;
+}
+.projectImage {
+  margin-right: 20px;
+}
+img {
+  height: 100%;
+}
