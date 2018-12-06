@@ -1,45 +1,60 @@
 import React from "react";
 import "../css/head.css";
-const Head = () => {
-  const changeTab = e => {
-    console.log(e.target.value);
+class Head extends React.Component {
+  changeTab = e => {
+    this.props.changeTab(e.target.firstChild.data);
   };
-  return (
-    <header className="head">
-      <div>
-        <div id="headerLogo">
-          <a href="/">
-            <h1>Amit Shukla</h1>
-          </a>
+  componentDidMount = () => {
+    document.getElementById(this.props.active).className += " aboutHover";
+  };
+
+  componentDidUpdate = () => {
+    const idList = ["portfolio", "articles", "videos", "about"];
+    const newidList = idList.filter((val, key) => val != this.props.active);
+    newidList.map((val, id) => {
+      document.getElementById(val).className = "headerNavList";
+    });
+    document.getElementById(this.props.active).className += " aboutHover";
+  };
+
+  render() {
+    return (
+      <header className="head">
+        <div>
+          <div id="headerLogo">
+            <a href="/">
+              <h1>Amit Shukla</h1>
+            </a>
+          </div>
+          <div id="headerNav">
+            <nav>
+              <ul>
+                <li className="headerNavList" title="Portfolio" id="portfolio">
+                  <a href="#" className="headerNav">
+                    <b onClick={this.changeTab}>Portfolio</b>
+                  </a>
+                </li>
+                <li className="headerNavList" title="Articles" id="articles">
+                  <a href="#" className="headerNav">
+                    <b onClick={this.changeTab}>Articles</b>
+                  </a>
+                </li>
+                <li className="headerNavList" title="Videos" id="videos">
+                  <a href="#" className="headerNav">
+                    <b onClick={this.changeTab}>Videos</b>
+                  </a>
+                </li>
+                <li className="headerNavList" title="About Me" id="about">
+                  <a href="#" className="headerNav">
+                    <b onClick={this.changeTab}>About</b>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
-        <div id="headerNav">
-          <nav>
-            <ul>
-              <li className="headerNavList aboutHover" title="Portfolio">
-                <a href="#" className="headerNav">
-                  <b onClick={changeTab}>Portfolio</b>
-                </a>
-              </li>
-              <li className="headerNavList" title="Articles">
-                <a href="#" className="headerNav">
-                  <b>Articles</b>
-                </a>
-              </li>
-              <li className="headerNavList" title="Videos">
-                <a href="/" className="headerNav">
-                  <b>Videos</b>
-                </a>
-              </li>
-              <li className="headerNavList" title="About Me">
-                <a href="/" className="headerNav">
-                  <b>About</b>
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </header>
-  );
-};
+      </header>
+    );
+  }
+}
 export default Head;
