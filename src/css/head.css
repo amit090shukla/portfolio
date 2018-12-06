@@ -85,6 +85,9 @@ article {
   max-height: 120px;
   margin-bottom: 15px;
 }
+/* #project-link :hover {
+  box-shadow: 0 0 30px #d2d2d2;
+} */
 .projectImage {
   margin-right: 20px;
 }
