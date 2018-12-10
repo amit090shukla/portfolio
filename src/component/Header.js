@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from "react";
 import "../css/head.css";
 class Head extends React.Component {
@@ -10,7 +11,7 @@ class Head extends React.Component {
 
   componentDidUpdate = () => {
     const idList = ["portfolio", "articles", "videos", "about"];
-    const newidList = idList.filter((val, key) => val != this.props.active);
+    const newidList = idList.filter((val, key) => val !== this.props.active);
     newidList.map((val, id) => {
       document.getElementById(val).className = "headerNavList";
     });

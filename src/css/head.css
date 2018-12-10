@@ -92,10 +92,17 @@ article {
   margin-right: 20px;
 }
 img {
-  height: 100%;
+  /* height: 100%; */
+  border-radius: 10px;
+  width: 100%;
 }
 /* ABOUT ME */
 h2 {
+  outline: 0;
+  color: #656c7a;
+  font-family: "Roboto Slab", Arial, sans-serif;
+}
+h3 {
   outline: 0;
   color: #656c7a;
   font-family: "Roboto Slab", Arial, sans-serif;

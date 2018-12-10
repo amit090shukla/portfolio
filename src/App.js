@@ -36,6 +36,8 @@ class App extends Component {
             <About />
           </div>
         );
+      default:
+        return null;
     }
   };
 
